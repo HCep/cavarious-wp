@@ -1,0 +1,147 @@
+@import 'variables.less';
+@import 'mixins.less';
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    
+}
+html, body{
+    overflow-x:hidden;
+}
+::selection{
+    background-color:#86c5d2 ;
+}
+p{
+    line-height:28px;
+    font-size:15px;
+    color:#716c68;
+    @media @small{
+        font-size:18px;
+    }
+}
+body{
+   
+    max-width:1920px;
+    margin:0 auto;
+  
+}
+h1,h2,h3{
+    font-family: 'PT serif'; 
+}
+h2{
+    font-size:1.7em;
+    @media @small{
+        font-size:2em;
+    }
+}
+h1{
+    font-size:1.7em;
+    @media @small{
+        font-size:2.5em;
+    }
+}
+.row{
+    margin-left:0;
+    margin-right:0;
+}
+blockquote{
+    border-left: 3px solid #adadaa;
+    padding-left: 5%;
+    font-size:22px;
+    line-height:180%;
+    color:#626262;
+}
+input[type="date"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="text"], 
+input[type="url"], 
+select, 
+textarea{
+    padding: 10px;
+    outline: none;
+    margin: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 13px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    color: #626262;
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #EBEBEB;
+    &:focus{
+        color:#1982c2;
+        background-color: #e9f5fc;
+        border-color: #EBEBEB;
+    }
+}
+textarea{
+    min-height:60px;
+    width:100%;
+}
+label, legend{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align:center;
+}
+ input[type="submit"], input[type="reset"], input[type="button"]{
+    display: inline-block;
+    background-color: #87c5d2;
+    color: #fff;
+    padding: 11px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-right: 7px;
+    border: 0;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);
+ }
+ input[type="submit"]{
+     margin-right:0px;
+     margin-left:75px;
+ }
+.title {
+    font-size:40px;
+    text-shadow:0px 3px 6px rgba(0,0,0,.3);
+    white-space:nowrap;
+    @media @small{
+        font-size:60px;
+    }
+}
+.wp-block-column{
+    overflow-x:hidden;
+}
+.wp-block-cover{
+    height:300px;
+}
+a{
+    color:#372921;
+    &:hover{
+        color:#372921;
+        text-decoration: none;
+    }
+}
+.mobile-hidden{
+    display:none;
+    @media @small{
+            display:block;
+    }
+}
+.desktop-hidden{
+    display:block;
+    @media @small{
+            display:none;
+    }
+}

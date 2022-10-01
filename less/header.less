@@ -1,0 +1,110 @@
+@import 'variables.less';
+@import 'mixins.less';
+.navbar{
+    position:relative;
+    min-height:60px;
+    justify-content:end;
+    z-index:1;
+  
+    
+    .navbar-collapse{
+        justify-content:center;
+    }
+    .navbar-nav{
+        display:flex;
+        width:auto;
+        @media @large{
+            width:1000px;
+        }
+    }
+}
+.menu-list-container-main{
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width:100%;
+    @media @large{
+     
+        flex-direction: row;
+        
+    }
+    
+    li{
+        display:inline-block;
+        text-align:left;
+        @media @large{
+            text-align:center;
+        }
+        &:nth-child(3){
+            margin-right:0px;
+            @media @large{
+                margin-right:175px;
+            }
+
+        }
+        &:nth-child(4){
+            margin-left:0px;
+            transform:translateX(0px);
+            @media @large{
+                margin-left:175px;
+                transform:translateX(60px);
+            }
+        }
+        &:nth-child(5){
+        
+            transform:translateX(0px);
+            @media @large{
+              
+                transform:translateX(60px);
+            }
+        }
+      
+        a{
+            color:@accent-color;
+            font-size:20px;
+            font-weight:bold;
+            text-decoration: none;
+            &:active, &:hover{
+                text-decoration: none;
+            }
+        }
+        
+    }
+    
+    
+
+}
+.navbar-brand{
+    background-color:transparent;
+    position:absolute;
+    left:0%;
+    transform:translateX(0%);
+    bottom:auto;
+    top:-20px;
+    height:100px;
+    z-index:2;
+    border-radius:100%;
+    @media @small{
+        top:auto;
+    background-color: white; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+     bottom: -55px; 
+    height: 150px;
+   
+    }
+
+    img{
+        position:relative;
+        display:block;
+        margin:0 auto;
+        bottom:-10px;
+        height:100%;
+    }
+}
+.dropdown-menu{
+    padding:10px;
+    min-width:auto;
+}
